@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walmart Tree Initiative</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQLNhq81NY9wAxIDb1Ly331-4B2Th-i3G21g&usqp=CAU">
+    </head>
+    <!-- https://www.plus2net.com/javascript_tutorial/clock.php -->
+    <!-- code source for getting current date -->
+    <script>function display_ct() {
+        var x = new Date()
+        var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+        hours = x.getHours( ) % 12;
+        hours = hours ? hours : 12;
+        hours=hours.toString().length==1? 0+hours.toString() : hours;
+        
+        var minutes=x.getMinutes().toString()
+        minutes=minutes.length==1 ? 0+minutes : minutes;
+        
+        var seconds=x.getSeconds().toString()
+        seconds=seconds.length==1 ? 0+seconds : seconds;
+        
+        var month=(x.getMonth() +1).toString();
+        month=month.length==1 ? 0+month : month;
+        
+        var dt=x.getDate().toString();
+        dt=dt.length==1 ? 0+dt : dt;
+        
+        var x1=month + "/" + dt + "/" + x.getFullYear(); 
+        x1 = x1 + " - " +  hours + ":" +  minutes + ":" +  seconds + " " + ampm;
+        document.getElementById('date').innerHTML = x1;
+        display_c();
+        }
+         function display_c(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct()',refresh)
+        }
+        display_c()
+    </script>
+<body onload=display_ct(); style="background-color:#FFFFFF;">
+    <h1 style="margin-bottom:0.25em;margin-top:0.25em;text-align: center;color: #003087; font-size: 50px">Eco-Friendly Products for Trees</h1>
+    <p style="margin-bottom:0.25em;margin-top:0.25em;text-align: center;color: #0072CE; font-size: 30px">For every eco-friendly product purchased online or in stores Walmart will plant a tree.</p>
+    <p style="margin-bottom:0.25em;margin-top:0.25em;text-align: center;color: #FFB81C; font-size: 30px">As of <span id='date' ></span> <span id='count'></span> trees have been planted.</p>
+    <center><canvas id="canvas" height="375" width="375"></canvas></center>
+    <script src="tree.js" type="module" defer></script>
+    <p style="text-align: left;color: #0072CE; font-size: 20px">Products included in promotion. Click image to purchase product.</p>
+    <table>
+        <tbody>
+        <tr>
+            <td>  
+                <a href="https://www.walmart.com/ip/Genuine-Joe-Compostable-Paper-Cups-10-oz-1000-count-GJO10214CT/50545505">
+                <img alt="Compostable Paper Cups" src="https://i5.walmartimages.com/asr/be97fbe3-08e1-4c92-8d9d-438a79bc23aa_1.f63fa9fde4ce2ba0c238b0713479bb3a.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Compostable Paper Cups</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/Seventh-Generation-Napkins-100-Recycled-Paper-Unbleached-500-sheets/16352097">
+                <img alt="Napkins from 100% Recycled Paper" src="https://i5.walmartimages.com/asr/a0278a34-12d4-4e67-9001-c5d8fc2b14a6_1.840815b0299c2926b0468f12160d34e8.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Napkins from 100% Recycled Paper</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/ECOS-Parsley-All-Purpose-Cleaner-22-FL-oz/28457040">
+                <img alt="Earth Friendly All Purpose Cleaner" src="https://i5.walmartimages.com/asr/83d05eb3-90e6-4521-ae5b-16ed12a3bff6_1.98cb044c11ca51197a09a098d0b5fc0c.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Earth Friendly All Purpose Cleaner</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/EARTH-FRIENDLY-PRODUCTS-PL9764-04-1-gal-Odorless-High-Efficiency-Liquid-Laundry-Detergent/28471740">
+                <img alt="Earth Friendly Laundry Detergent" src="https://i5.walmartimages.com/asr/2bc5c33e-08a3-4b25-9d5a-0ad2a72c2670.b75c731d371a55aa265950658ccef1df.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Earth Friendly Laundry Detergent</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/Earth-Friendly-Dishmate-Almond-25-oz/21433424">
+                <img alt="Earth Friendly Dish Soap" src="https://i5.walmartimages.com/asr/5cf6c112-e780-49e6-9f45-79ed95c6aec5_1.7e7fe0075019e2612ed49facee07d6d4.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Earth Friendly Dish Soap</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/Earth-Friendly-Orange-Blossom-Hand-Soap-6x17-OZ/977860538">
+                <img alt="Earth Friendly Hand Soap" src="https://i5.walmartimages.com/asr/0fbd7043-bcf2-4a15-98d7-d9cd23254851_1.4fa00ae157fd2be836425bdc0e4f9169.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Earth Friendly Hand Soap</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/Great-Value-10in-Compostable-Plate-20ct/942421836">
+                <img alt="Compostable Paper Plates" src="https://i5.walmartimages.com/asr/d4e5d59e-ef41-43f8-879a-983214ac443d.6133aecfe6c8faf91aa57a428309f7de.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Compostable Paper Plates</figcaption>
+            </td>
+            <td>
+                <a href="https://www.walmart.com/ip/Venus-Laboratories-Earth-Friendly-Petastic-Pet-Stain-Odor-Remover-32-oz/814180952">
+                <img alt="Earth Friendly Pet Stain & Odor Remover" src="https://i5.walmartimages.com/asr/5384182d-55db-4b60-ac69-6a3d4d5834a7.2d0b64ff5765722479a34c09c3f8b88d.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff"
+                width="150" height="150">
+                </a>
+                <figcaption>Earth Friendly Pet Stain & Odor Remover</figcaption>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="accel-snackbar" style="left: 50%; transform: translate(-50%, 0px); top: 50px;">&nbsp;</div>
+    <center><img src="walmartLogo.png" alt="Walmart Logo" width=25% height=auto></center>
+</body>
+</html>
